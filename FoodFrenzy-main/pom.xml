@@ -61,6 +61,10 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<!-- Specify the main class explicitly -->
+					<mainClass>com.example.demo.FoodFrenzyApplication</mainClass>
+				</configuration>
 			</plugin>
 		</plugins>
 		<finalName>foodfrenzy</finalName>
