@@ -2,13 +2,13 @@ version: 0.0
 os: linux
 
 files:
-  - source: server_clear.sh
+  - source: scripts/server_clear.sh
     destination: /home/ec2-user/server/server_clear.sh
-  - source: fix_privileges.sh
+  - source: scripts/fix_privileges.sh
     destination: /home/ec2-user/server/fix_privileges.sh
-  - source: server_start.sh
+  - source: scripts/server_start.sh
     destination: /home/ec2-user/server/server_start.sh
-  - source: server_stop.sh
+  - source: scripts/server_stop.sh
     destination: /home/ec2-user/server/server_stop.sh
 
 permissions:
