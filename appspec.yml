@@ -2,35 +2,29 @@ version: 0.0
 os: linux
 
 files:
-  - source: scripts/server_clear.sh
-    destination: /home/ec2-user/server/server_clear.sh
-  - source: scripts/fix_privileges.sh
-    destination: /home/ec2-user/server/fix_privileges.sh
-  - source: scripts/server_start.sh
-    destination: /home/ec2-user/server/server_start.sh
-  - source: scripts/server_stop.sh
-    destination: /home/ec2-user/server/server_stop.sh
+  - source: /
+    destination: /home/ec2-user/
 
 permissions:
-  - object: /home/ec2-user/server/*
+  - object: /home/ec2-user/*
     pattern: "**"
     owner: ec2-user
     group: ec2-user
 
 hooks:
   BeforeInstall:
-    - location: /home/ec2-user/server/server_clear.sh
+    - location: /home/ec2-user/server_clear.sh
       timeout: 300
       runas: ec2-user
   AfterInstall:
-    - location: /home/ec2-user/server/fix_privileges.sh
+    - location: /home/ec2-user/fix_privileges.sh
       timeout: 300
       runas: ec2-user
   ApplicationStart:
-    - location: /home/ec2-user/server/server_start.sh
+    - location: /home/ec2-user/server_start.sh
       timeout: 20
       runas: ec2-user
   ApplicationStop:
-    - location: /home/ec2-user/server/server_stop.sh
+    - location: /home/ec2-user/server_stop.sh
       timeout: 20
       runas: ec2-user
