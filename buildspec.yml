@@ -9,5 +9,5 @@ phases:
       - echo Build complete.
 artifacts:
   files:
-    - target/contacts-app.jar
+    - target/foodfrenzy.jar
   discard-paths: yes
