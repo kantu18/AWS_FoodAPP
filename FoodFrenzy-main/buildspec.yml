@@ -3,19 +3,16 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      java: correto21
-  pre_build:
-    commands:
-      - echo Nothing to do in the pre_build phase...
+      java: corretto21
   build:
     commands:
-      - echo Build started on `date`
-  
+      - mvn clean install
   post_build:
     commands:
-      - echo Build completed on `date`
-      
+      - echo Build completed
 artifacts:
   files:
-     - appspec.yml
+    - target/*.jar
+    - scripts/*.sh
+    - appspec.yml
   discard-paths: yes
