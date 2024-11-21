@@ -1,13 +1,21 @@
 version: 0.2
+
 phases:
+  install:
+    runtime-versions:
+      java: correto21
+  pre_build:
+    commands:
+      - echo Nothing to do in the pre_build phase...
   build:
     commands:
-      - echo Packaging JAR file...
-      - mvn clean package
+      - echo Build started on `date`
+  
   post_build:
     commands:
-      - echo Build complete.
+      - echo Build completed on `date`
+      
 artifacts:
   files:
-    - target/foodfrenzy.jar
+     - appspec.yml
   discard-paths: yes
