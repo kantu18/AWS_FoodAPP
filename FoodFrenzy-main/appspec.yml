@@ -7,14 +7,14 @@ files:
 
 hooks:
   BeforeInstall:
-    - location: scripts/server_clear.sh
+    - location: server_clear.sh
       timeout: 300
   AfterInstall:
-    - location: scripts/fix_privileges.sh
+    - location: fix_privileges.sh
       timeout: 300
   ApplicationStart:
-    - location: scripts/server_start.sh
+    - location: server_start.sh
       timeout: 20
   ApplicationStop:
-    - location: scripts/server_stop.sh
+    - location: server_stop.sh
       timeout: 20
