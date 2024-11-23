@@ -9,6 +9,7 @@ hooks:
   BeforeInstall:
     - location: server_clear.sh
       timeout: 300
+      runas: ec2-user
   AfterInstall:
     - location: fix_privileges.sh
       timeout: 300
