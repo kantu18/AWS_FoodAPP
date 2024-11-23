@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 
 files:
-  - source: /
+  - source: https://github.com/kantu18/AWS_FoodAPP/tree/main
     destination: /home/ec2-user/server
 
 hooks:
